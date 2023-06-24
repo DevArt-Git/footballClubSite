@@ -1,0 +1,919 @@
+/*
+=========================================================================
+	Tags
+=========================================================================
+*/
+body {
+    margin: 0;
+    font-size: 18px;
+    /* line-height: 20px; */
+    font-family: "Montserrat", sans-serif;
+    color: #121212;
+
+    background: #fff url(images/bodyback.png);
+
+    -webkit-font-smoothing: antialiased;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+.cl {
+    display: block;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -4000px;
+    clear: both;
+}
+.hide {
+    display: none;
+}
+a {
+    text-decoration: none;
+}
+/*
+=========================================================================
+	Container
+=========================================================================
+*/
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.shell_background {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: inset 0px 2px 4px rgb(0 0 0 / 20%);
+    -webkit-box-shadow: inset 0px 2px 4px rgb(0 0 0 / 20%);
+}
+/*
+=========================================================================
+	Header
+=========================================================================
+*/
+.header {
+    width: 100%;
+    height: 65px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    background: url(images/4_4\ square.png) left repeat-x;
+    background-size: 40px 40px;
+    box-shadow: inset 0px 2px 4px rgb(0 0 0 / 50%);
+    -webkit-box-shadow: inset 0px 2px 4px rgb(0 0 0 / 50%);
+}
+
+.header__inner {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 2px solid #fcc600;
+
+    /* background: #000000 url(images/footerback.png) center top repeat-x; */
+    background: #000000 url(images/dark-grey-tile.png);
+    box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+}
+
+.header.fixed {
+    position: fixed;
+    height: 40px;
+}
+.header.fixed .header__inner {
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+/*
+=========================================================================
+	Navigation
+=========================================================================
+*/
+
+#navUl {
+    margin: 0;
+    padding: 0;
+}
+
+.li_in_menu_nav {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav__link {
+    margin-left: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #f2f2f2;
+
+    font-size: 18px;
+    transition: color 0.2s linear;
+    text-shadow: 5px 9px 10px #000;
+}
+.nav__link:first-child {
+    margin-left: 0;
+}
+
+.nav__link:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+
+    background-color: #fdd74b;
+    opacity: 0;
+
+    z-index: 9999;
+
+    transition: opacity 0.1s linear;
+}
+
+.nav__link:hover {
+    color: #fdd74b;
+}
+
+.nav__link:hover:after {
+    opacity: 1;
+}
+
+#logo {
+    font-size: 40px;
+}
+#logo a {
+    text-decoration: none;
+    color: #fcc600;
+    text-shadow: 5px 9px 25px #000;
+}
+/*
+=========================================================================
+	Intro
+=========================================================================
+*/
+.intro {
+    padding-top: 66px;
+}
+
+.intro__inner {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 970px;
+    margin: 0 auto;
+}
+/*
+=========================================================================
+	Slider
+=========================================================================
+*/
+.data {
+    margin-top: 4%;
+}
+.ism-slider .data {
+    position: relative;
+    z-index: 1;
+}
+.slider-h {
+    padding: 0 0 0 5%;
+    margin: 0 auto;
+    display: block;
+    text-align: left;
+    color: whitesmoke;
+    /* width: 800px; */
+    line-height: 1.2;
+    font-size: 75px;
+    font-weight: bold;
+    text-shadow: 10px 10px 10px #000;
+}
+/* .data_info {
+    color: whitesmoke;
+    text-shadow: 5px 5px 15px #000;
+    margin-top: 6em;
+} */
+.box {
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 3em;
+    padding: 2px;
+    background-color: #eaab00; /* gold */
+    /* Single pixel data uri image http://jsfiddle.net/LPxrT/ 
+  /* background-image: gold, gold, white */
+    background-image: url("data:image/gif;base64,R0lGODlhAQABAPAAAOqrAP///yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="),
+        url("data:image/gif;base64,R0lGODlhAQABAPAAAOqrAP///yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="),
+        url("data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==");
+    background-repeat: no-repeat;
+    background-size: 0 2px, 0 100%, 0% 2px;
+    background-position: top center, top center, bottom center;
+    -webkit-animation: drawBorderFromCenter 6s;
+    box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes drawBorderFromCenter {
+    0% {
+        background-size: 0 2px, 0 0, 100% 100%;
+    }
+    20% {
+        background-size: 100% 2px, 100% 0, 100% 100%;
+    }
+    66% {
+        background-size: 100% 2px, 100% 98%, 100% 100%;
+    }
+    99% {
+        background-size: 100% 2px, 100% 98%, 0 2px;
+    }
+}
+
+.content {
+    /* background: #ffffff; */
+    background-color: #ffffff;
+    background-image: url("https://www.transparenttextures.com/patterns/p5.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    font-size: 10px;
+    letter-spacing: 2px;
+    padding: 0.5em;
+    text-align: center;
+    text-transform: uppercase;
+}
+/*
+=========================================================================
+	Blockquote
+=========================================================================
+*/
+.blockquote-6 {
+    display: inline-block;
+    border-left: 6px solid #FCC600;
+    font-size: 20px;
+    font-style: italic;
+    margin: 0 auto;
+    margin: 30px 50px;
+    padding: 16px 24px;
+    position: relative;
+}
+.blockquote-6:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -6px;
+    height: 40px;
+    background-color: #F2F2F0;
+    width: 6px;
+    margin-top: -1em;
+}
+.blockquote-6:after {
+    content: "”";
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    color: #3A3A3A;
+    font-size: 50px;
+    font-family: Times, sans-serif;
+    font-weight: bold;
+    line-height: 30px;
+}
+.blockquote-6 cite {
+    /* color: #337ab7; */
+    font-size: 16px;
+    padding-top: 10px;
+    display: block;
+    text-align: right;
+}
+/*
+=========================================================================
+	Welcome
+=========================================================================
+*/
+.welcome {
+    display: flex;
+    /* width: 90%; */
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.title {
+    padding: 40px 0 10px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 40px;
+    line-height: 1.6;
+    color: #121212;
+    font-weight: 600;
+}
+
+.welcome__text {
+    margin: 0;
+    text-indent: 60px;
+    line-height: 1.8;
+}
+/*
+=========================================================================
+	Advantages
+=========================================================================
+*/
+.advantages {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.advantages_footballer,
+.advantages_ul {
+    width: 50%;
+}
+.img_footballer {
+    max-width: 100%;
+    height: auto;
+}
+.logoFC_in_slider {
+    box-shadow: 0px 0px 30px #000;
+}
+
+.advantages li {
+    line-height: 1.8;
+}
+/*
+=========================================================================
+	Team
+=========================================================================
+*/
+
+.team {
+    margin-top: -20px;
+    padding-top: -10px;
+    background-color: #fffacd;
+    background-image: url("images/cubes.png");
+}
+.team__inner {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: 0 -15px;
+    padding-top: 30px;
+}
+.team__item {
+    /* width: 33.33333%; */
+    
+    margin: auto;
+    margin-top: 0;
+    width: 50%;
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+
+.team__item__description {
+     padding-right: 10%;  
+}
+
+.team__photo {
+    margin-bottom: 20px;
+    margin-left: 20%;
+    display: block;
+    width: 80%;
+    height: auto;
+    box-shadow: 0px 0px 2px 1px #000;
+}
+.team__name {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #2d3033;
+}
+.team__prof {
+    margin-bottom: 15px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #e84545;
+}
+.team__text {
+    margin-bottom: 15px;
+
+    text-indent: 0;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #6c7279;
+}
+/*
+=========================================================================
+	Social
+=========================================================================
+*/
+.social {
+    display: flex;
+}
+.social__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+
+    /* border: 1px solid #000000; */
+
+    /* transition: background 0.5s linear; */
+}
+.social__item:hover .social__icon {
+    fill: #000;
+}
+.social__icon {
+    display: block;
+    height: 40px;
+
+    fill: #c6cacc;
+
+    transition: fill 0.1s linear;
+}
+
+/*
+=========================================================================
+	Features
+=========================================================================
+*/
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-top: 30px;
+}
+
+.features__item {
+    padding: 0 20px;
+    width: 33.33333%;
+
+    text-align: center;
+    font-size: 20px;
+}
+
+.features__title {
+    margin-bottom: 15px;
+
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.features__item__group {
+    display: block;
+    padding: 30px 0 0;
+    /* text-transform: uppercase; */
+
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+}
+
+.features__item__group:after {
+    margin: 0 auto;
+    margin-top: 10px;
+    content: "";
+    display: block;
+    width: 50%;
+    min-width: 50%;
+    height: 4px;
+
+    background-color: #fdd74b;
+}
+.price:after {
+    display: none;
+    /* margin: 0 auto;
+    margin-top: 10px;
+    content: "";
+    display: block;
+    width: 50%;
+    min-width: 50%;
+    height: 4px;
+
+    background-color: #15b800; */
+}
+/*
+=========================================================================
+	Last information
+=========================================================================
+*/
+.last_information {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+}
+.last_information__text {
+    margin-top: 40px;
+    padding-bottom: 20px;
+    line-height: 1.8;
+    text-indent: 60px;
+}
+.last_information__img__cup {
+    width: 200px;
+    height: auto;
+}
+/*
+=========================================================================
+	Contacts
+=========================================================================
+*/
+
+.contact {
+    /* overflow: hidden; */
+    margin: 0 auto;
+    width: 100%;
+    background: url(images/grass_background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.contact_frame {
+    padding: 0 30px 40px;
+
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: inset 0px 2px 4px rgb(0 0 0 / 40%);
+    -webkit-box-shadow: inset 0px 2px 4px rgb(0 0 0 / 40%);
+}
+.contact_club_name {
+    padding-top: 30px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.6;
+}
+.contact p {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.6;
+}
+.contact_phone,
+.invitation_text {
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.6;
+}
+/*
+=========================================================================
+	Footer
+=========================================================================
+*/
+.footer {
+    background-color: #17171f;
+    /* background: url(images/bg-footer-noise.jpg) repeat; */
+}
+.footer__inner {
+    font-size: 16px;
+    padding: 35px 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #fcc600;
+}
+.footer__block {
+    width: 25%;
+    padding: 0 15px;
+
+    text-align: left;
+}
+.footer__title {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+}
+.footer__address,
+.footer__phone_number {
+    font-style: normal;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.5);
+}
+.footer__email_address {
+    padding-bottom: 25px;
+}
+.footer__block__email {
+    text-decoration: none;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.5);
+}
+#footer_logo {
+    text-align: right;
+}
+.logoFC_in_footer {
+    width: 40%;
+    box-shadow: 0px 0px 30px #000;
+}
+.social__icon__footer {
+    padding-top: 25px;
+}
+/*
+=========================================================================
+	Copiright
+=========================================================================
+*/
+.footer__copiright {
+    padding: 20px 0;
+    margin: 0 auto;
+    text-align: center;
+}
+.footer__copiright__text {
+    font-size: 12px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.5);
+}
+/*
+=========================================================================
+	Burger
+=========================================================================
+*/
+button:active,
+button:focus {
+    outline: none;
+}
+button::-moz-focus-inner {
+    border: 0;
+}
+.burger {
+    display: none;
+    padding: 9px 1px;
+
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+.burger__item {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+
+    font-size: 0;
+    color: transparent;
+    cursor: pointer;
+
+    position: relative;
+}
+.burger__item::before,
+.burger__item::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+
+    background-color: #fff;
+
+    position: absolute;
+    left: 0%;
+    z-index: 1;
+}
+.burger__item::before {
+    top: -8px;
+}
+.burger__item::after {
+    bottom: -8px;
+}
+/*
+=========================================================================
+	Media
+=========================================================================
+*/
+@media (max-width: 991px) {
+    .header__inner.fixed {
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .li_in_menu_nav {
+        display: block;
+        padding: 10px 0px;
+        /* margin-top: 1em; */
+    }
+
+    .nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: right;
+
+        background: url(images/dark-grey-tile.png);
+    }
+    .nav__link:after {
+        display: none;
+    }
+    .nav.show {
+        display: flex;
+    }
+    .nav__link {
+        padding: 10px 0px;
+    }
+    .logoFC_in_slider {
+        width: 120px;
+    }
+    .burger {
+        display: flex;
+    }
+
+    .slider-h {
+        font-size: 40px;
+    }
+    .intro__inner {
+        padding: 0 100px;
+    }
+
+    .box {
+        width: 600px;
+        margin-top: 1em;
+    }
+    .content {
+        font-size: 8px;
+    }
+
+    .team__item {
+        width: 50%;
+    }
+    .team__item_3 {
+        width: 50%;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+    
+    .team__photo {
+        margin: 0 auto;
+    }
+}
+@media (max-width: 767px) {
+    body {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    .header__inner {
+        padding: 10px 10px;
+    }
+    #logo {
+        font-size: 32px;
+    }
+
+    .container_mobile {
+        padding: 0 0px;
+    }
+    .container_mobile_5px {
+        padding: 0 5px;
+    }
+
+    .ism-slider {
+        height: 200px;
+    }
+
+    .title {
+        padding: 30px 0 10px;
+        font-size: 30px;
+        line-height: 1.4;
+    }
+
+    .intro__inner {
+        padding: 30px 50px 0;
+    }
+    .logoFC_in_slider {
+        width: 60px;
+    }
+    .slider-h {
+        font-size: 24px;
+    }
+
+    .blockquote-6 {
+        margin: 15px 25px;
+    }
+
+    .box {
+        width: 320px;
+        margin-top: 10px;
+    }
+    .content {
+        font-size: 4px;
+    }
+
+    .welcome__text {
+        text-indent: 0;
+    }
+    .team__item {
+        width: 100%;
+    }
+
+    .team__photo {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .lineheight_1_6 {
+        line-height: 1.6;
+    }
+    .last_information {
+        flex-wrap: wrap-reverse;
+    }
+    .last_information__text {
+        text-indent: 0;
+    }
+    .last_information__img {
+        margin: 0 auto;
+    }
+
+    .advantages {
+        flex-wrap: wrap-reverse;
+    }
+    .advantages_footballer,
+    .advantages_ul {
+        width: 100%;
+    }
+    .advantages_footballer {
+        margin: 0 auto;
+    }
+
+    .features {
+        margin-top: 20px;
+    }
+    .features__item {
+        width: 100%;
+
+        margin-bottom: 5px;
+        margin-top: 10px;
+    }
+
+    .contact_frame {
+        padding: 0 5px 20px;
+    }
+
+    .footer__block {
+        width: 50%;
+        padding: 0 10px;
+
+        text-align: left;
+    }
+    .footer__inner {
+        padding: 20px 0 10px;
+        font-size: 14px;
+        flex-wrap: wrap-reverse;
+    }
+    #footer_logo {
+        text-align: left;
+    }
+}
+
+@media (max-width: 320px) {
+    .intro__inner {
+        padding: 30px 50px 0;
+    }
+    .logoFC_in_slider {
+        width: 50px;
+    }
+    .slider-h {
+        font-size: 22px;
+    }
+    .box {
+        width: 300px;
+        padding: 1px;
+        /* margin-top: 1em; */
+    }
+    .content {
+        font-size: 3px;
+    }
+
+    .footer__block {
+        width: 100%;
+        padding: 0 30px;
+
+        text-align: left;
+    }
+    #footer_logo {
+        text-align: left;
+    }
+    .footer__email_address {
+        padding: 0;
+    }
+    .footer__title {
+        margin-top: 10px;
+    }
+    .social__icon__footer {
+        padding-top: 15px;
+    }
+}
